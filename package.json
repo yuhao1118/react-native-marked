@@ -1,6 +1,6 @@
 {
-  "name": "react-native-marked",
-  "version": "5.0.4",
+  "name": "@yuhao1118/react-native-marked",
+  "version": "5.0.7",
   "description": "Markdown renderer for React Native powered by marked.js",
   "main": "dist/commonjs/index",
   "module": "dist/module/index",
@@ -38,15 +38,16 @@
     "markdown",
     "react-native markdown"
   ],
-  "repository": "https://github.com/gmsgowtham/react-native-marked",
-  "author": "Gowtham G <webappsbygowtham@gmail.com> (https://github.com/gmsgowtham)",
+  "repository": "https://github.com/yuhao1118/react-native-marked",
+  "author": "Yuhao Li <liyuhao20001118@gmail.com> (https://github.com/yuhao1118)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gmsgowtham/react-native-marked/issues"
+    "url": "https://github.com/yuhao1118/react-native-marked/issues"
   },
-  "homepage": "https://github.com/gmsgowtham/react-native-marked#readme",
+  "homepage": "https://github.com/yuhao1118/react-native-marked#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@babel/core": "7.22.5",
