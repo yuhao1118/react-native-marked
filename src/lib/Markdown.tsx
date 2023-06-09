@@ -8,13 +8,13 @@ import type Parser from "./Parser";
 const MemoItem = memo(
 	({ item, parser }: { item: Token; parser: Parser }) => {
 		const elements = parser.parse([item]);
-		console.log("elements", elements);
+		console.log("render raw", item.raw);
 		return <>{elements}</>;
 	},
 	(prevProps, nextProps) => prevProps.item.raw === nextProps.item.raw,
 );
 
-const keyExtractor = (item: Token, index: number) => `${index}.${item.raw}`;
+const keyExtractor = (_: Token, index: number) => index.toString();
 
 const Markdown = ({
 	value,
