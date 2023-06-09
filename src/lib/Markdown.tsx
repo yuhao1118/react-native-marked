@@ -1,4 +1,4 @@
-import React, { memo, useCallback } from "react";
+import React, { Fragment, memo, useCallback } from "react";
 import { FlatList, useColorScheme } from "react-native";
 import type { MarkdownProps, Token } from "./types";
 import { useMarkdownBase } from "../hooks/useMarkdown";
@@ -8,8 +8,13 @@ import type Parser from "./Parser";
 const MemoItem = memo(
 	({ item, parser }: { item: Token; parser: Parser }) => {
 		const elements = parser.parse([item]);
-		console.log("render raw", item.raw);
-		return <>{elements}</>;
+		return (
+			<>
+				{elements.map((item, index) => (
+					<Fragment key={index}>{item}</Fragment>
+				))}
+			</>
+		);
 	},
 	(prevProps, nextProps) => prevProps.item.raw === nextProps.item.raw,
 );
